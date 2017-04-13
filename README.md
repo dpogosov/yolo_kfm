@@ -2,7 +2,7 @@
 The Nature Conservancy Fisheries Monitoring
 Team: Classifying Nemo
 
-Solution: 
+# Solution: 
 1. Network: trained YOLO v2 (you only look once) convolutional network;
 2. Basic weights: were downloaded from http://pjreddie.com/media/files/darknet19_448.conv.23
 3. Dataset: the given training set plus extra images from imagenet and internet;
@@ -12,12 +12,12 @@ Solution:
 	- adding white noise,
 	- horizontal flipping.
 
-Submitted files description:
+# Submitted files description:
 darkflow - folder with the framework (needs python, tensorflow and opencv)
 darkflow/test - folder with the test images (stage 1)
 darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
 
-How to use:
+# How to use:
 Stage 1
 1) Test images are in the folder darkflow/test. 
 Note that the number of the files number should be exact divided by 16. Hence, for 1000 test images there are extra (fake) 8 images. Do not delete them!
