@@ -4,9 +4,9 @@ The Nature Conservancy Fisheries Monitoring
 Team: Classifying Nemo
 
 # Solution
-1. Network: trained YOLO v2 (you only look once) convolutional network https://pjreddie.com/darknet/yolo/;
+1. Network: trained YOLO v2 (you only look once) convolutional network https://pjreddie.com/darknet/yolo/
 2. Basic weights: were downloaded from http://pjreddie.com/media/files/darknet19_448.conv.23
-3. Dataset: the given training set plus extra images from imagenet and internet;
+3. Dataset: the given training set plus extra images from imagenet and internet
 4. Data augmentation: almost all the images were recursive augmented by 
 	- rotation,
 	- crop and move,
@@ -30,7 +30,7 @@ Stage 2
 1) Put the test images to the folder darkflow/test_stg2. 
 Note that the number of the files number should be exact divided by 16. Hence, for 12153 test images there are extra (fake) 7 images. Do not delete them!
 2) Run darkflow/test2.sh to start prediction
-3) Run darkflow/test_stg2/out/output_converter2.m to convert predictions to CSV file
+3) Run darkflow/test_stg2/out/output_converter2.m to convert predictions to CSV file. Note that the converter merges the previous stage last CSV file with the second stage predictions. You may run them sequentially, but the first stage result does noo affect the second one.
 4) Done!
 
 Extras
