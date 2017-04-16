@@ -11,7 +11,8 @@ Team: Classifying Nemo
 	- rotation,
 	- crop and move,
 	- adding white noise,
-	- horizontal flipping.
+	- horizontal flipping,
+	- scaling (incorporated in the training pipeline)
 
 # Submitted files description
 - darkflow - folder with the framework (needs python, tensorflow and opencv)
@@ -20,17 +21,24 @@ Team: Classifying Nemo
 
 # How to use
 Stage 1
-1) Test images are in the folder darkflow/test. 
+1) Put the test images (stg1) are in the folder darkflow/test. 
 Note that the number of the files number should be exact divided by 16. Hence, for 1000 test images there are extra (fake) 8 images. Do not delete them!
 2) Run darkflow/test.sh to start prediction
 3) Run darkflow/test/out/output_converter.m to convert predictions from the step 2 to CSV file
 4) Done!
 
 Stage 2
-1) Put the test images to the folder darkflow/test_stg2. 
+1) Put the test images (stg2) to the folder darkflow/test_stg2. 
 Note that the number of the files number should be exact divided by 16. Hence, for 12153 test images there are extra (fake) 7 images. Do not delete them!
 2) Run darkflow/test2.sh to start prediction
 3) Run darkflow/test_stg2/out/output_converter2.m to convert predictions to CSV file. Note that the converter merges the previous stage last CSV file with the second stage predictions. You may run them sequentially, but the first stage result does noo affect the second one.
 4) Done!
 
 Extras
+
+# todo:
+Scripts, 
+euclid, 
+link to training + CFG's;
+weights, 
+darkflow
