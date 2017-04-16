@@ -4,7 +4,7 @@ The Nature Conservancy Fisheries Monitoring
 Team: Classifying Nemo
 
 # Solution
-1. Network: trained YOLO v2 (you only look once) convolutional network https://pjreddie.com/darknet/yolo/
+1. Network: trained [YOLO v2](https://pjreddie.com/darknet/yolo/) (you only look once) convolutional network 
 2. Basic weights: were downloaded from http://pjreddie.com/media/files/darknet19_448.conv.23
 3. Dataset: the given training set plus extra images from imagenet and internet
 4. Data augmentation: almost all the images were recursive augmented by 
