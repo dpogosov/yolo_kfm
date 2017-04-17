@@ -3,7 +3,7 @@ The Nature Conservancy Fisheries Monitoring
 
 Team: Classifying Nemo
 
-# Solution
+## Solution
 1. Network: trained [YOLO v2](https://pjreddie.com/darknet/yolo/) (you only look once) convolutional network 
 2. Basic weights: were downloaded from http://pjreddie.com/media/files/darknet19_448.conv.23
 3. Dataset: the given training set plus extra images from imagenet and internet
@@ -14,7 +14,8 @@ Team: Classifying Nemo
 	- horizontal flipping,
 	- scaling (incorporated in the training pipeline)
 
-# Submitted files description
+# Files description (detection)
+Detrector is based on the [darkflow](https://github.com/thtrieu/darkflow) framework.
 - darkflow - folder with the framework (needs python, tensorflow and opencv)
 - darkflow/test - folder with the test images (stage 1)
 - darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
