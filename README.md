@@ -14,7 +14,7 @@ Team: Classifying Nemo
 	- horizontal flipping,
 	- scaling (incorporated in the training pipeline)
 
-## Files description (detection)
+## Files description
 Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflow) framework.
 - darkflow - folder with the framework (needs python, tensorflow and opencv)
 - darkflow/test - folder for the test images (stage 1)
@@ -22,9 +22,9 @@ Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflo
 - darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
 - darkflow/test_stg2/out/output_converter_pseudo_label.m (needs matlab)
 - euclid.py - slightly modified labeller from https://github.com/prabindh/euclid (needs python)
-- [darkflow/yolo-KFM_1.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the first model (only two were allowed to upload)
-- [darkflow/yolo-KFM_2.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the second model (only two were allowed to upload)
-- [darkflow/yolo-KFM_extra.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights were obtained with extra training (not uploaded)
+- darkflow/[yolo-KFM_1.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the first model (only two were allowed to upload)
+- darkflow/[yolo-KFM_2.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the second model (only two were allowed to upload)
+- darkflow/[yolo-KFM_extra.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights were obtained with extra training (not uploaded)
 - extras - folder with some extra scripts (need matlab)
 - extras/im_test3.m - needs for manual classifying images (shows an image and buttons to copy the image to a class folder)
 - extras/aughmenter_yolo.m - makes augmented data from the training set (needs json files)
@@ -35,11 +35,13 @@ Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflo
 ## Training
 ### Framewrok
 The network was trained in [darknet](https://github.com/prabindh/darknet). All the relevant files are in the folder _training_.
-[Here](https://github.com/prabindh/darknet) and [here](https://github.com/AlexeyAB/darknet) you can find everything about training YOLO.
+
+[Here](https://github.com/prabindh/darknet) and [here](https://github.com/AlexeyAB/darknet) you can find very nice guidlines about training YOLO.
 ### Data preparation
 1) Augment the trainng data with _aughmenter_yolo.m_
 2) Add extra images and label them by _euclid.py_
 3) Augment the extra data with aughmenter_yolo2.m 
+
 Or simple download [the whole training dataset](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing).
 
 ## How to use
