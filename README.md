@@ -24,7 +24,7 @@ Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflo
 ### Stage 1
 1) Put the test images (stg1) are in the folder darkflow/test. 
 Note that the number of the files number should be exact divided by 16. Hence, for 1000 test images there are extra (fake) 8 images. Do not delete them!
-2) Run darkflow/test.sh to start prediction
+2) Run darkflow/test_s1_m#.sh to start prediction for the model #;
 3) Run darkflow/test/out/output_converter.m to convert predictions from the step 2 to CSV file
 4) Done!
 
