@@ -15,21 +15,22 @@ Team: Classifying Nemo
 	- scaling (incorporated in the training pipeline)
 
 ## Files description
-Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflow) framework.
-- darkflow - folder with the framework (needs python, tensorflow and opencv)
-..- darkflow/test - folder for the test images (stage 1)
+Detector is based on the modified [darkflow](https://github.com/thtrieu/darkflow) framework.
+#### darkflow - folder with the framework (needs python, tensorflow and opencv)
+- darkflow/test - folder for the test images (stage 1)
 - darkflow/test_stg2 - folder for the test images (stage 2)
 - darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
-- darkflow/test_stg2/out/output_converter_pseudo_label.m (needs matlab)
+- darkflow/test_stg2/out/output_converter_pseudo_label.m - could be used for pesudo-labelling (needs matlab)
 - darkflow/[yolo-KFM_1.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the first model (only two were allowed to upload)
 - darkflow/[yolo-KFM_2.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the second model (only two were allowed to upload)
 - darkflow/[yolo-KFM_extra.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights were obtained with extra training (not uploaded)
-- extras - folder with some extra scripts (need matlab)
+#### extras - folder with some extra scripts (need matlab)
 - extras/im_test3.m - needs for manual classifying images (shows an image and buttons to copy the image to a class folder)
-- extras/aughmenter_yolo.m - makes augmented data from the training set (needs json files)
-- extras/aughmenter_yolo1.m - makes augmented data from the training set (needs txt (label) files)
+- extras/aughmenter_yolo.m - makes augmented data from the training set (from json files)
+- extras/aughmenter_yolo1.m - makes augmented data from the training set (from txt (label) files)
 - extras/kfm_converter_labels.m - converts json labels to YOLO format
 - extras/euclid.py - slightly modified labeller from https://github.com/prabindh/euclid (needs python)
+#### trainig - folder with training relevant files
 
 ## Training
 ### Framewrok
@@ -37,9 +38,10 @@ The network was trained in [darknet](https://github.com/prabindh/darknet). All t
 
 [Here](https://github.com/prabindh/darknet) and [here](https://github.com/AlexeyAB/darknet) you can find very nice guidlines about training YOLO.
 ### Data preparation
-1) Augment the trainng data with _aughmenter_yolo.m_
-2) Add extra images and label them by _euclid.py_
-3) Augment the extra data with aughmenter_yolo2.m 
+1) Convert [labels](https://github.com/autoliuweijie/Kaggle/tree/master/NCFM/datasets)for [the given training set](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/train.zip)
+2) Augment the trainng data with _aughmenter_yolo.m_
+3) Add extra images and label them by _euclid.py_
+4) Augment the extra data with aughmenter_yolo2.m 
 
 Or simple download [the whole training dataset](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing).
 
