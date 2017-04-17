@@ -18,7 +18,16 @@ Team: Classifying Nemo
 Detrector is based on the modified [darkflow](https://github.com/thtrieu/darkflow) framework.
 - darkflow - folder with the framework (needs python, tensorflow and opencv)
 - darkflow/test - folder with the test images (stage 1)
+- darkflow/test_stg2 - folder with the test images (stage 2)
 - darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
+- darkflow/test_stg2/out/output_converter_pseudo_label.m
+- euclid.py - slightly modified labeller from https://github.com/prabindh/euclid
+- darkflow/yolo-KFM_1.weights - weights for the first model (only two were allowed to upload)
+- darkflow/yolo-KFM_2.weights - weights for the second model (only two were allowed to upload)
+- darkflow/yolo-KFM_extra.weights - weights were obtained with extra training (not uploaded)
+
+## Training
+The network was trained in [darknet](https://github.com/prabindh/darknet). All relevant files are in the folder _training.
 
 ## How to use
 ### Stage 1
