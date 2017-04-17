@@ -33,7 +33,7 @@ Detector is based on the modified [darkflow](https://github.com/thtrieu/darkflow
 #### trainig - folder with training relevant files
 
 ## Training
-### Framewrok
+### Framework
 The network was trained in [darknet](https://github.com/prabindh/darknet). All the relevant files are in the folder _training_.
 
 [Here](https://github.com/prabindh/darknet) and [here](https://github.com/AlexeyAB/darknet) you can find very nice guidlines about training YOLO.
