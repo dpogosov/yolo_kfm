@@ -1,0 +1,7 @@
+classes= 7
+train  = data/train.txt
+valid  = data/train.txt
+test  = data/train.txt
+names  = data/KFM.names
+backup = backup/
+
