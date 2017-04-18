@@ -17,20 +17,20 @@ Team: Classifying Nemo
 ## Files description
 Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow) framework.
 #### darkflow - folder with the framework (needs python, tensorflow and opencv)
-- darkflow/test - folder for the test images (stage 1)
-- darkflow/test_stg2 - folder for the test images (stage 2)
-- darkflow/test/out/output_converter.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
-- darkflow/test_stg2/out/output_converter2.m - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
-- darkflow/test_stg2/out/output_converter_pseudo_label.m - could be used for pesudo-labelling (needs matlab)
-- darkflow/[yolo-KFM_1.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the first model (only two were allowed to upload)
-- darkflow/[yolo-KFM_2.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights for the second model (only two were allowed to upload)
-- darkflow/[yolo-KFM_extra.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) - weights were obtained with extra training (not uploaded)
+- *darkflow/test* - folder for the test images (stage 1)
+- *darkflow/test_stg2* - folder for the test images (stage 2)
+- *darkflow/test/out/output_converter.m* - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
+- *darkflow/test_stg2/out/output_converter2.m* - the file that converts the network output to CSV for submission and does fine tuning (needs matlab)
+- *darkflow/test_stg2/out/output_converter_pseudo_label.m* - could be used for pesudo-labelling (needs matlab)
+- *darkflow/[yolo-KFM_1.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing)* - weights for the first model (only two were allowed to upload)
+- *darkflow/[yolo-KFM_2.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing)* - weights for the second model (only two were allowed to upload)
+- *darkflow/[yolo-KFM_extra.weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing)* - weights were obtained with extra training (not uploaded)
 #### extras - folder with some extra scripts (need matlab)
-- extras/im_test3.m - needs for manual classifying images (shows an image and buttons to copy the image to a class folder)
-- extras/aughmenter_yolo.m - makes augmented data from the training set (from json files)
-- extras/aughmenter_yolo1.m - makes augmented data from the training set (from txt (label) files)
-- extras/kfm_converter_labels.m - converts json labels to YOLO format
-- extras/euclid.py - slightly modified [labeller](https://github.com/prabindh/euclid) (needs python)
+- *extras/im_test3.m* - needs for manual classifying images (shows an image and buttons to copy the image to a class folder)
+- *extras/aughmenter_yolo.m* - makes augmented data from the training set (from json files)
+- *extras/aughmenter_yolo1.m* - makes augmented data from the training set (from txt (label) files)
+- *extras/kfm_converter_labels.m* - converts json labels to YOLO format
+- *extras/euclid.py* - slightly modified [labeller](https://github.com/prabindh/euclid) (needs python)
 #### training - folder with training relevant files
 
 ## Training
@@ -60,5 +60,5 @@ Note that the number of the files should be exact divided by 16. Hence, for 1000
 1) Put the [test images (stg2)](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/test_stg2.7z) to the folder darkflow/test_stg2. 
 Note that the number of the files should be exact divided by 16. Hence, for 12153 test images there are extra (fake) 7 images. Do not delete them!
 2) Run *darkflow/test_s2_m#.sh* to start prediction for the model *#*
-3) Run *darkflow/test_stg2/out/output_converter2.m* to convert predictions to CSV file. Note that the converter merges the previous stage *last.CSV* file with the second stage predictions. You may run them sequentially, but the first stage result does not affect the second one. **Note** likelhoods fine tuning: gain 0.75, threshold 0.4
+3) Run *darkflow/test_stg2/out/output_converter2.m* to convert predictions to CSV file. Note that the converter merges the previous stage *last.csv* file with the second stage predictions. You may run them sequentially, but the first stage result does not affect the second one. **Note** likelhoods fine tuning: gain 0.75, threshold 0.4
 4) Done!
