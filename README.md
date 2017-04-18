@@ -47,18 +47,18 @@ The network was trained in [Darknet](https://github.com/prabindh/darknet). All t
 Or simple download [the whole training dataset](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing)
 
 ## How to use
-0) Download this repo; download [the weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) and put them to the darkflow folder
+0) Download this [repo](https://github.com/dpogosov/yolo_kfm); download [the weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) and put them to the darkflow folder
 
 ### Stage 1
 1) Put the [test images (stg1)](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/test_stg1.zip) to the folder darkflow/test. 
 Note that the number of the files should be exact divided by 16. Hence, for 1000 test images there are extra (fake) 8 images. Do not delete them!
-2) Run darkflow/test_s1_m#.sh to start prediction for the model #
-3) Run darkflow/test/out/output_converter.m to convert predictions from the step 2 to CSV file. **Note** likelhoods fine tuning: gain 1.2, threshold 0.1
+2) Run *darkflow/test_s1_m#.sh* to start prediction for the model *#*
+3) Run *darkflow/test/out/output_converter.m* to convert predictions from the step 2 to CSV file. **Note** likelhoods fine tuning: gain 1.2, threshold 0.1
 4) Done!
 
 ### Stage 2
 1) Put the [test images (stg2)](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/test_stg2.7z) to the folder darkflow/test_stg2. 
 Note that the number of the files should be exact divided by 16. Hence, for 12153 test images there are extra (fake) 7 images. Do not delete them!
-2) Run darkflow/test_s2_m#.sh to start prediction for the model #
-3) Run darkflow/test_stg2/out/output_converter2.m to convert predictions to CSV file. Note that the converter merges the previous stage last CSV file with the second stage predictions. You may run them sequentially, but the first stage result does noo affect the second one. **Note** likelhoods fine tuning: gain 0.75, threshold 0.4
+2) Run *darkflow/test_s2_m#.sh* to start prediction for the model *#*
+3) Run *darkflow/test_stg2/out/output_converter2.m* to convert predictions to CSV file. Note that the converter merges the previous stage *last.CSV* file with the second stage predictions. You may run them sequentially, but the first stage result does not affect the second one. **Note** likelhoods fine tuning: gain 0.75, threshold 0.4
 4) Done!
