@@ -47,7 +47,7 @@ The network was trained in [Darknet](https://github.com/prabindh/darknet). All t
 Or simple download [the whole training dataset](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing)
 
 ## How to use
-0) Download this [repo](https://github.com/dpogosov/yolo_kfm); download [the weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) and put them to the darkflow folder
+0) Download this [repo](https://github.com/dpogosov/yolo_kfm.git); download [the weights](https://drive.google.com/drive/folders/0BwYTO3UZXciuYWUtQ1FvUzc5MWM?usp=sharing) and put them to the darkflow folder
 
 ### Stage 1
 1) Put the [test images (stg1)](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/test_stg1.zip) to the folder darkflow/test. 
