@@ -31,6 +31,11 @@ Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow
 - *extras/aughmenter_yolo1.m* - makes augmented data from the training set (from txt (label) files)
 - *extras/kfm_converter_labels.m* - converts json labels to YOLO format
 - *extras/euclid.py* - slightly modified [labeller](https://github.com/prabindh/euclid) (needs python)
+- *extras/auyolo_test2.m* - augments test images to improve quality of predictions
+- *extras/output_converter2aug.m* - the file that converts the network output (from augmented set) to CSV for submission and does fine tuning (needs matlab)
+- *extras/dir.mat* - supplementary for the converter above
+
+
 #### training - folder with training relevant files
 
 ## Training
@@ -80,3 +85,8 @@ Note that the number of the files should be exact divided by 16. Hence, for 1215
 2) Run *darkflow/test_s2_m#.sh* to start prediction for the model *#*
 3) Run *darkflow/test_stg2/out/output_converter2.m* to convert predictions to CSV file. Note that the converter merges the previous stage *last.csv* file with the second stage predictions. You may run them sequentially, but the first stage result does not affect the second one. **Note** likelhoods fine tuning: gain 0.75, threshold 0.4
 4) Done!
+
+### Detection improvement
+You may improve the quality of detection by augmenting test images.
+1. Run the converter *auyolo_test2.m* in he folder with test images. Note by default it does rotation and flipping, but you can also do cropping and white noise adding.
+2. Follow the pipelines above, only use *output_converter2aug.m* for conversion predictions to CSV file
