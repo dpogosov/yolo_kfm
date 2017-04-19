@@ -35,9 +35,26 @@ Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow
 
 ## Training
 ### Framework
-The network was trained in [Darknet](https://github.com/prabindh/darknet). All the relevant files are in the folder _training_.
+The network was trained in [Darknet](https://github.com/prabindh/darknet).
+#### Compiling
+You should compile the framework before usage. 
+I recommend to change the hard path to cuda in Makefile to $(CUDA_HOME)
+In addition add a couple of env. variables (with the correct path in your machine):
 
+*export PATH=$PATH:/usr/local/cuda-8.0/bin*
+
+*export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64*
+
+#### Training
+You should configure Yolo. All the relevant files are in the folder _training_. Simple put them to [Darknet](https://github.com/prabindh/darknet) folder.
+Example of the traning command (with pretrained [weights](http://pjreddie.com/media/files/darknet19_448.conv.23)) on the first two GPUs:
+
+*./darknet detector train data/KFM.data yolo-KFM.cfg darknet19_448.conv.23 -gpus 0,1*
+
+#### Guidlines
 [Here](https://github.com/prabindh/darknet) and [here](https://github.com/AlexeyAB/darknet) you can find very nice guidlines about training YOLO.
+
+
 ### Data preparation
 1) Convert [labels](https://github.com/autoliuweijie/Kaggle/tree/master/NCFM/datasets) for [the given training set](https://www.kaggle.com/c/the-nature-conservancy-fisheries-monitoring/download/train.zip) by *kfm_converter_labels.m*
 2) Augment the trainng data with _aughmenter_yolo.m_
