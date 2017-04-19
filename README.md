@@ -34,7 +34,7 @@ Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow
 #### training - folder with training relevant files
 
 ## Training
-#### Framework
+### Framework
 The network was trained in [Darknet](https://github.com/prabindh/darknet).
 #### Compiling
 You should compile the framework before usage. 
