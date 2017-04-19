@@ -34,7 +34,7 @@ Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow
 #### training - folder with training relevant files
 
 ## Training
-### Framework
+#### Framework
 The network was trained in [Darknet](https://github.com/prabindh/darknet).
 #### Compiling
 You should compile the framework before usage. 
@@ -47,6 +47,7 @@ In addition add a couple of env. variables (with the correct path in your machin
 
 #### Training
 You should configure Yolo. All the relevant files are in the folder _training_. Simple put them to [Darknet](https://github.com/prabindh/darknet) folder.
+
 Example of the traning command (with pretrained [weights](http://pjreddie.com/media/files/darknet19_448.conv.23)) on the first two GPUs:
 
 *./darknet detector train data/KFM.data yolo-KFM.cfg darknet19_448.conv.23 -gpus 0,1*
