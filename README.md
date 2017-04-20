@@ -90,4 +90,4 @@ Note that the number of the files should be exact divided by 16. Hence, for 1215
 ### Detection improvement
 You may improve the quality of detection by augmenting test images.
 1. Run the converter *auyolo_test2.m* in he folder with test images. Note by default it does rotation and flipping, but you can also do cropping and white noise adding.
-2. Follow the pipelines above, only use *output_converter2aug.m* for conversion predictions to CSV file
+2. Follow the pipelines above, only use *output_converter2aug.m, dir.mat* for conversion predictions to CSV file
