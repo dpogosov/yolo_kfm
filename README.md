@@ -35,8 +35,9 @@ Detector is based on the modified [Darkflow](https://github.com/thtrieu/darkflow
 - *extras/output_converter2aug.m* - the file that converts the network output (from augmented set) to CSV for submission and does fine tuning (needs matlab)
 - *extras/dir.mat* - supplementary for the converter above
 
-
 #### training - folder with training relevant files
+
+#### cluster_manual.pdf - some useful guidlines for working with computing clusters SURFsara and Speedy.
 
 ## Training
 ### Framework
